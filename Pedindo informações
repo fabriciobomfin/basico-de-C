@@ -1,0 +1,36 @@
+ #include <stdio.h>
+
+
+int main(){
+ 
+  char nome [50];
+  //char para frases(se esse for o caso precisa adicionar um número entre as chaves)
+  int idade = 0;
+  //int para intero
+  float peso = 0.0;
+  //float para decimal
+  char sexo; 
+  //char para apenas uma letra(não tem necessidade de colocar números)
+ 
+
+printf("Qual seu nome ?\n");
+scanf(" %s",&nome);
+// s para frases
+printf("Qual sua idade ?\n");
+scanf(" %d",&idade);
+// d para inteiro
+printf("Qual seu sexo ? (Coloque M para masculino e F para feminino)\n");
+scanf(" %c",&sexo);
+// c para apenas uma letra
+printf("Qual seu peso ?\n");
+scanf(" %f",&peso);
+// f para decimal
+
+printf("\nEsse e seu nome:\n%s",nome);
+printf("\nEssa e a sua idade:\n%d",idade);
+printf("\nEsse e seu sexo:\n%c",sexo);
+printf("\nEsse e seu peso:\n%f",peso);
+//colocar \n antes e depois para deixar organizado
+return 0;
+
+}
