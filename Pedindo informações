@@ -1,14 +1,18 @@
- #include <stdio.h>
-
+ #include <stdio.h> // biblioteca básica para o funcionamento do código
+ #include <locale.h> // biblioteca necessaria para deixar em português
 
 int main(){
- 
+  setlocale(LC_ALL, ""); //comando para deixar em português
+  
   char nome [50];
   //char para frases(se esse for o caso precisa adicionar um número entre as chaves)
+  
   int idade = 0;
   //int para intero
+  
   float peso = 0.0;
   //float para decimal
+  
   char sexo; 
   //char para apenas uma letra(não tem necessidade de colocar números)
  
