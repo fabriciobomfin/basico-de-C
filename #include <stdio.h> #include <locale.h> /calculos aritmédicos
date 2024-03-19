@@ -1,26 +1,22 @@
 #include <stdio.h>
-#include <locale.h> // biblioteca necessaria para deixar em português
 
-int main(){
-   setlocale(LC_ALL, "");
+int main() {
+    int dado = 10;
+   
+    dado++;
+    printf("Será somado mais um\n");
+   
+    dado--;
+    printf("Será diminuído um\n");	
+   
+    dado += 3;
+    printf("Será adicionado a quantidade que foi colocada após o igual\n");
+   
+    dado -= 4;
+    printf("Será subtraído baseado no valor colocado após a virgula\n");
+   
+    dado *= 10;
+    printf("Será multiplicado baseado no número colocado\n");
 
-int a, b, soma, subtracao, divicao, multiplicacao;
-
-printf("Digite o primeiro número: \n");
-scanf("%d", &a);	
-	
-printf("Digite o primeiro número: \n");
-scanf("%d", &b);
-
-soma = a + b;
-subtracao = a - b;	
-divicao = a / b;
-multiplicacao = a * b;
-
-printf("\no resultado da soma:%d\n",soma);
-printf("\no resultado da divição:%d\n",divicao);	
-printf("\no resultado da subtração:%d\n",subtracao);	
-printf("\no resultado da multiplicação:%d\n",multiplicacao);
-
-return 0;
-	
+    return 0;
+}
