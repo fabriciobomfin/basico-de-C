@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "");
+
+    float nota;
+    char recuperacao;
+
+    printf("Digite a sua nota: ");
+    scanf("%f", &nota);
+
+    printf("Você está em recuperação? (S/N): ");
+    scanf(" %c", &recuperacao); // Note o espaço antes de %c para ignorar espaços em branco e novas linhas extras
+
+    // Disjunção (OU): Se a nota for maior ou igual a 7 OU se a nota for maior ou igual a 6 e o aluno está em recuperação, o aluno é aprovado
+    if (nota >= 7.0 || (nota >= 6.0 && recuperacao == 'S')) {
+        printf("Parabéns, você foi aprovado(a)!!\n");
+    } else {
+        printf("Reprovado(a)\n");
+    }
+
+    // Conjunção (E): Se a nota for maior ou igual a 7 E o aluno não está em recuperação, ele não precisa fazer recuperação
+    if (nota >= 7.0 && recuperacao == 'N') {
+        printf("Você não precisa fazer recuperação.\n");
+    }
+
+    // Negação: Se a nota for menor do que 7, o aluno não foi aprovado
+    if (!(nota >= 7.0) && recuperacao != 'S') { // Negando a condição de aprovação e verificando se o aluno não está em recuperação
+        printf("Você precisa fazer recuperação.\n");
+    }
+
+    return 0;
+}
+
