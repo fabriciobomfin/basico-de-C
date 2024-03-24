@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+	setlocale(LC_ALL,"");
+	
+	int numero1,numero2,resultado;
+	char calculo;
+    
+    
+	printf("Digite a operação (+,-,*,/):\n");
+ 	scanf("%c",&calculo); 	
+
+	printf("Digite o primeiro número:\n");
+	scanf("%d",&numero1); 
+	
+	printf("Digite o primeiro número:\n");
+	scanf("%d",&numero2); 
+	
+
+	switch(calculo){ //coloque a variavel dentro dos parenteses
+		    
+			case '+':
+		resultado = numero1 + numero2;
+		printf("O resultado é:%d\n",resultado);	
+		break;// comando para parar
+		
+			case '-' :
+		resultado = numero1 - numero2;
+		printf("O resultado é:%d\n",resultado);	
+		break;
+		
+			case '*':
+		resultado = numero1 * numero2;
+		printf("O resultado é:%d\n",resultado);	
+		break;
+		
+			case '/':
+		resultado = numero1 / numero2;
+		printf("O resultado é:%d\n",resultado);
+		break;
+		
+		
+		
+		default:  // default é como se fosse um -else-,será aplicado quando nunhuma das opções foram selecionadas.
+			printf("Digito não identificado.");
+	}
+	return 0;
+	
+	
+	
+	
+}
