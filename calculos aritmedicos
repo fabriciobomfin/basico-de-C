@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int dado = 10;
+   
+    dado++;
+    printf("Será somado mais um\n");
+   
+    dado--;
+    printf("Será diminuído um\n");	
+   
+    dado += 3;
+    printf("Será adicionado a quantidade que foi colocada após o igual\n");
+   
+    dado -= 4;
+    printf("Será subtraído baseado no valor colocado após a virgula\n");
+   
+    dado *= 10;
+    printf("Será multiplicado baseado no número colocado\n");
+
+    return 0;
+}
