@@ -1,41 +1,50 @@
 #include <stdio.h>
 #include <locale.h>
 
-int main (){
+int main() {
 	setlocale(LC_ALL,"");
 	
-	int diasDaSemana;
-    
-	printf("Digite um valor de 1 a 7:\n");
-	scanf("%d",&diasDaSemana);
+	int semana;
+	
+	printf("Digite um número de 1 a 7:\n");
+	scanf("%d",&semana); 
+	
+	switch(semana){ //coloque a variavel dentro dos parenteses
+		    
+			case 1:
+		printf("Domingo.");	
+		break;// comando para parar
+		
+			case 2:
+		printf("Segunda.");	
+		break;
+		
+			case 3:
+		printf("Terça.");	
+		break;
+		
+			case 4:
+		printf("Quarta.");	
+		break;
+		
+			case 5:
+		printf("Quinta.");	
+		break;
+		
+			case 6:
+		printf("Sexta.");	
+		break;
+		
+			case 7:
+		printf("sabado.");	
+		break;
+		
+		default:  // default é como se fosse um -else-,será aplicado quando nunhuma das opções foram selecionadas.
+			printf("Digito não identificado.");
+	}
+	return 0;
 	
 	
-	switch(diasDaSemana){
 	
-		case 1:
-			printf("Domingo.\n");
-			break;
-    	case 2:
-			printf("Segunda.\n");
-			break;
-		case 3:
-			printf("Terça.\n");
-			break;	
-    	case 4:
-			printf("Quarta.\n");
-			break;
-    	case 5:
-			printf("Quinta.\n");
-			break;
-    	case 6:
-			printf("Sexta.\n");
-			break;
-    	case 7:
-			printf("Sabado.\n");
-			break;
-    		
-    
-	} 
-    return 0;
-
+	
 }
